@@ -15,10 +15,24 @@ public class Board {
     
 	//This method requires your input	
 	public static void initialisePieces(){
-		
+		Board.setPiece(0,0,new Rook(PieceColour.BLACK));		
+		Board.setPiece(0,1,new Knight(PieceColour.BLACK));		
+		Board.setPiece(0,2,new Bishop(PieceColour.BLACK));		
+		Board.setPiece(0,3,new Queen(PieceColour.BLACK));		
+		Board.setPiece(0,4,new King(PieceColour.BLACK));		
+		Board.setPiece(0,5,new Bishop(PieceColour.BLACK));		
+		Board.setPiece(0,6,new Knight(PieceColour.BLACK));		
+		Board.setPiece(0,7,new Rook(PieceColour.BLACK));
+		Board.setPiece(1,0,new Pawn(PieceColour.BLACK));		
+		Board.setPiece(1,1,new Pawn(PieceColour.BLACK));
+		Board.setPiece(1,2,new Pawn(PieceColour.BLACK));
+		Board.setPiece(3,3,new Pawn(PieceColour.BLACK));
+		Board.setPiece(1,4,new Pawn(PieceColour.BLACK));
+		Board.setPiece(1,5,new Pawn(PieceColour.BLACK));
+		Board.setPiece(1,6,new Pawn(PieceColour.BLACK));
+		Board.setPiece(1,7,new Pawn(PieceColour.BLACK));
 	}
-	
-	//This method requires your input	
+		
 	public static void printBoard(){
 		System.out.print("\n  a b c d e f g h \n");
 		System.out.print("  -----------------\n");		

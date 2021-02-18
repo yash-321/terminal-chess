@@ -6,6 +6,7 @@ public class Game {
 	//This method requires your input
 	public static void play(){
 		while (!gameEnd){
+			
 		}		
 	}
 	

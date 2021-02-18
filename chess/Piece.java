@@ -7,4 +7,8 @@ public class Piece {
 	public String getSymbol() {
 		return symbol;
 	}	
+
+	public void setSymbol(String s){
+		symbol = s;
+	}
 }
