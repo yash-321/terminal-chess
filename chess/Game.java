@@ -10,14 +10,19 @@ public class Game {
 		boolean turn = true;
 		String origin;
 		String destination;
+		String confirm = "no";
 		int[] start = {0, 0};
 		int[] move = {0, 0};
 		while (!gameEnd){
 			if (turn){
-				System.out.println("White's Move");
+				System.out.println(" ");
+				System.out.println("------ White's Move ------");
+				System.out.println(" ");
 			}
 			else{
-				System.out.println("Black's Move");
+				System.out.println(" ");
+				System.out.println("------ Black's Move ------");
+				System.out.println(" ");
 			}
 			origin = console.readLine("Enter space of piece you want to move: ");
 			if (CheckInput.checkCoordinateValidity(origin)){
@@ -28,7 +33,7 @@ public class Game {
 					if (((active.getColour() == PieceColour.WHITE) && (turn)) || ((active.getColour() == PieceColour.BLACK) && (turn == false))){
 						System.out.println(active.getSymbol());
 						while (true){
-							destination = console.readLine("Enter the space you would like to move to(press <enter> to go back): ");
+							destination = console.readLine("Enter the space you would like to move to (press <enter> to go back): ");
 							if (destination.equals("") || destination.equals(" ")){
 								break;
 							}
@@ -64,16 +69,31 @@ public class Game {
 					System.out.println("No piece on this square");
 				}
 			}
+			else if (origin.equals("end") || origin.equals("End") || origin.equals("END")) {
+				confirm = console.readLine("Are you sure you would like to end the game(y): ");
+				if (confirm.equals("y") || confirm.equals("Y")){
+					gameEnd = true;
+					confirm = "yes";
+				}
+			}
 			else{
 				System.out.println("Space not on board");
 			}
 		}
 		turn = !turn;
-		if (turn){
-			System.out.println("White Wins!");
-		}		
+		if (confirm.equals("yes")){
+			System.out.println(" ");
+			System.out.println("Game ended!");
+		}
 		else{
-			System.out.println("Black Wins!");
+			if (turn){
+				System.out.println(" ");
+				System.out.println("White Wins!");
+			}		
+			else{
+				System.out.println(" ");
+				System.out.println("Black Wins!");
+			}
 		}
 	}
 	

@@ -35,12 +35,12 @@ public class Pawn extends Piece{
             //Not taking a piece
             if(colour.equals(PieceColour.WHITE)){
                 if(Board.hasPiece(i - 1, j)){
-                	System.out.println("Can't attack piece in front a");
+                	System.out.println("Can't attack piece in front");
                     return false;
                 }
             }else{
                 if(Board.hasPiece(i + 1, j)){
-                	System.out.println("Can't attack piece in front b");
+                	System.out.println("Can't attack piece in front");
                     return false;
                 }
             }
@@ -62,12 +62,12 @@ public class Pawn extends Piece{
 
                 if(colour.equals(PieceColour.WHITE)){
                     if(Board.hasPiece(i - 2, j)){
-                    	System.out.println("Can't attack piece in front c");
+                    	System.out.println("Can't attack piece in front");
                         return false;
                     }
                 }else{
                     if(Board.hasPiece(i + 2, j)){
-                    	System.out.println("Can't attack piece in front d");
+                    	System.out.println("Can't attack piece in front");
                         return false;
                     }
                 }
